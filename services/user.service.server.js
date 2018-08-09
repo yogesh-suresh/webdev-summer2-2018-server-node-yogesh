@@ -50,10 +50,12 @@ module.exports = function (app) {
     function profile(req, res) {
         var id = req.session.currentUser._id;
         console.log("PROF SESSION ID:"+id);
-        userModel.findUserById(id)
-            .then(function (user) {
-                res.json(user);
-            })
+        if(id!= null) {
+            userModel.findUserById(id)
+                .then(function (user) {
+                    res.json(user);
+                })
+        }
     }
 
     function createUser(req, res) {
