@@ -64,4 +64,4 @@ userService(app);
 
 require('./services/section.service.server')(app);
 
-app.listen(process.env.PORT ||4000);
+app.listen(process.env.PORT ||3000);
