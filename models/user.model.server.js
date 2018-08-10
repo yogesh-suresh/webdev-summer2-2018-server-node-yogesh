@@ -8,7 +8,6 @@ function findUserByCredentials(credentials) {
 
 function findUserById(userId) {
     return userModel.findById(userId);
-    // return userModel.findOne(userId)
 }
 
 function createUser(user) {

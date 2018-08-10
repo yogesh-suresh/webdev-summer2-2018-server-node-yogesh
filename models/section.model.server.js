@@ -19,7 +19,7 @@ function decrementSectionSeats(sectionId) {
 
 function findSectionById(sectionId)
 {
-    // console.log("TRY HARD:"+sectionModel.find({_id:sectionId},{seats: 1, _id:0}).seats);
+
     return sectionModel.find({_id:sectionId},{seats: 1, _id:0}).seats;
 
 }

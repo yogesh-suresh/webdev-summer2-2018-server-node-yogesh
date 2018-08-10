@@ -48,9 +48,11 @@ module.exports = function (app) {
     }
 
     function profile(req, res) {
-        var id = req.session.currentUser._id;
-        console.log("PROF SESSION ID:"+id);
-        if(id !== undefined) {
+        if (typeof req.session['currentUser'] === 'undefined') {
+            res.send(null);
+        }
+        else {
+            var id = req.session.currentUser._id;
             userModel.findUserById(id)
                 .then(function (user) {
                     res.json(user);
