@@ -49,8 +49,9 @@ module.exports = function (app) {
     }
 
     function profile(req, res) {
+
         if (typeof req.session['currentUser'] === 'undefined') {
-            res.send(null);
+           return res.json(null);
         }
         else {
             var id = req.session.currentUser._id;
