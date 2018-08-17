@@ -14,7 +14,7 @@ function findSubmission(submissionId) {
  }
 
 function findSubmissionsForUser(quizId,studentId) {
-     return submissionModel.find({quiz: quizId},{student: studentId}).populate('student');
+     return submissionModel.find({student: studentId}).populate('student');
  }
 
 function findAllSubmissions() {
