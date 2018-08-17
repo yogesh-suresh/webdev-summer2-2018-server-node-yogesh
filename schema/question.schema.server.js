@@ -3,6 +3,7 @@ module.exports = mongoose.Schema({
     title: String,
     points: Number,
     description: String,
+    blanks:[],
     choices: [{
         text: String,
         value: String,
