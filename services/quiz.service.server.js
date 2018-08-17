@@ -32,8 +32,9 @@ module.exports = function (app) {
      function findSubmissionsForUser(req, res) {
 
             var sId = req.params.studId
+            var sId = req.params.qId
             submissionModel
-                .findSubmissionsForUser(sId)
+                .findSubmissionsForUser(qId,sId)
                 .then(function (submissions) {
                     res.json(submissions);
                 });

@@ -13,8 +13,8 @@ function findSubmission(submissionId) {
      return submissionModel.findById(submissionId);
  }
 
-function findSubmissionsForUser(studentId) {
-     return submissionModel.find({student: studentId}).populate('student');
+function findSubmissionsForUser(quizId,studentId) {
+     return submissionModel.find({quiz: quizId},{student: studentId}).populate('student');
  }
 
 function findAllSubmissions() {
